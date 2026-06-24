@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facts Fusion Universe V3</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+background:radial-gradient(circle at center,#111827,#020617 75%);
+color:white;overflow-x:hidden;
+}
+
+/* Animated stars */
+.stars,.stars2{
+position:fixed;inset:0;z-index:-2;
+background-repeat:repeat;
+}
+.stars{
+background-image:
+radial-gradient(2px 2px at 20% 30%,#fff,transparent),
+radial-gradient(2px 2px at 70% 20%,#fff,transparent),
+radial-gradient(1px 1px at 40% 70%,#fff,transparent),
+radial-gradient(2px 2px at 80% 80%,#fff,transparent);
+animation:twinkle 4s infinite alternate;
+}
+.stars2{
+animation:twinkle 7s infinite alternate-reverse;
+opacity:.5;
+}
+@keyframes twinkle{from{opacity:.4}to{opacity:1}}
+
+nav{
+position:sticky;top:0;
+display:flex;justify-content:space-between;align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+z-index:100;
+}
+
+nav a{
+color:#ffd700;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+text-align:center;
+padding:70px 20px;
+}
+
+.logo{
+width:240px;
+border-radius:50%;
+box-shadow:0 0 50px gold;
+animation:pulse 3s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.06)}
+}
+
+h1{
+font-size:72px;
+color:#ffd700;
+text-shadow:0 0 30px gold;
+margin-top:20px;
+}
+
+.tagline{
+font-size:24px;
+margin-top:15px;
+opacity:.9;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:#ff0000;
+color:white;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+}
+
+/* Universe */
+.universe{
+height:750px;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.core{
+width:220px;
+height:220px;
+border-radius:50%;
+border:3px solid gold;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+font-weight:bold;
+box-shadow:0 0 50px gold;
+background:rgba(255,215,0,.05);
+}
+
+.orbit{
+position:absolute;
+border:1px solid rgba(255,255,255,.15);
+border-radius:50%;
+animation:spin linear infinite;
+}
+
+.orbit1{width:320px;height:320px;animation-duration:15s}
+.orbit2{width:500px;height:500px;animation-duration:25s}
+.orbit3{width:680px;height:680px;animation-duration:40s}
+
+.planet{
+position:absolute;
+top:-25px;
+left:50%;
+transform:translateX(-50%);
+padding:12px 18px;
+background:#111827;
+border-radius:30px;
+box-shadow:0 0 20px rgba(255,215,0,.6);
+}
+
+@keyframes spin{
+from{transform:rotate(0deg)}
+to{transform:rotate(360deg)}
+}
+
+.section{
+max-width:1200px;
+margin:auto;
+padding:80px 20px;
+}
+
+.section h2{
+text-align:center;
+color:#ffd700;
+font-size:44px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(17,24,39,.8);
+padding:25px;
+border-radius:18px;
+border:1px solid #374151;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(255,215,0,.3);
+}
+
+.about{
+text-align:center;
+max-width:900px;
+margin:auto;
+font-size:18px;
+line-height:1.8;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:black;
+color:#aaa;
+}
+
+@media(max-width:768px){
+h1{font-size:42px}
+.logo{width:170px}
+.universe{height:500px}
+.orbit1{width:220px;height:220px}
+.orbit2{width:320px;height:320px}
+.orbit3{width:420px;height:420px}
+.planet{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="stars2"></div>
+
+<nav>
+<div><strong>FACTS FUSION</strong></div>
+<div>
+<a href="#vault">Vault</a>
+<a href="#about">About</a>
+<a href="https://www.youtube.com/@AIFactHub-w6u">YouTube</a>
+</div>
+</nav>
+
+<section class="hero">
+<img class="logo" src="https://i.ibb.co/d0pNjDp0/Chat-GPT-Image-Jun-24-2026-01-29-44-PM.png">
+<h1>FACTS FUSION</h1>
+<p class="tagline">Every Fact Starts A New Journey</p>
+<a class="btn" href="https://www.youtube.com/@AIFactHub-w6u">🚀 Explore Facts</a>
+</section>
+
+<section class="universe">
+
+<div class="orbit orbit3">
+<div class="planet">🏛 History</div>
+</div>
+
+<div class="orbit orbit2">
+<div class="planet">🚀 Space</div>
+</div>
+
+<div class="orbit orbit1">
+<div class="planet">🤖 AI</div>
+</div>
+
+<div class="core">
+KNOWLEDGE<br>CORE
+</div>
+
+</section>
+
+<section class="section" id="vault">
+<h2>Knowledge Vault</h2>
+
+<div class="grid">
+<div class="card">🤖 Artificial Intelligence</div>
+<div class="card">🚀 Space Exploration</div>
+<div class="card">🔬 Science Discoveries</div>
+<div class="card">⚡ Technology</div>
+<div class="card">🧩 Mysteries</div>
+<div class="card">🌍 World Facts</div>
+<div class="card">🐾 Animals</div>
+<div class="card">🏛 History</div>
+</div>
+
+</section>
+
+<section class="section" id="about">
+<h2>About Facts Fusion</h2>
+
+<div class="about">
+Facts Fusion is a futuristic knowledge universe where curiosity meets discovery. Explore fascinating facts, science, AI, technology, history, mysteries and the wonders of space through engaging content and videos.
+</div>
+
+</section>
+
+<footer>
+© 2026 Facts Fusion | Know More. Every Day.
+</footer>
+
+</body>
+</html>
