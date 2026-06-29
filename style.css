@@ -1,0 +1,147 @@
+/* ===========================
+   FACTS FUSION V2
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background-image:
+    radial-gradient(2px 2px at 20% 30%,white,transparent),
+    radial-gradient(2px 2px at 70% 15%,white,transparent),
+    radial-gradient(2px 2px at 40% 70%,white,transparent),
+    radial-gradient(2px 2px at 85% 80%,white,transparent),
+    radial-gradient(2px 2px at 60% 45%,white,transparent);
+    animation:twinkle 5s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:.4;}
+to{opacity:1;}
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+background:rgba(0,0,0,.25);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo-text{
+font-size:28px;
+font-weight:700;
+color:#FFD700;
+letter-spacing:2px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:.3s;
+font-weight:500;
+}
+
+nav a:hover{color:#FFD700;}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{max-width:850px;}
+
+.hero h1{
+font-size:72px;
+line-height:1.1;
+color:#FFD700;
+text-shadow:0 0 20px gold;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.8;
+color:#ddd;
+margin-bottom:40px;
+}
+
+.btn{
+display:inline-block;
+padding:18px 40px;
+background:#ff0033;
+border-radius:50px;
+color:white;
+font-weight:600;
+text-decoration:none;
+transition:.35s;
+box-shadow:0 0 25px rgba(255,0,60,.4);
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 40px rgba(255,0,60,.8);
+}
+
+.knowledge-universe{
+height:500px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.coming-soon{
+font-size:34px;
+color:#00d4ff;
+}
+
+section{padding:100px 8%;}
+
+footer{
+text-align:center;
+padding:40px;
+background:#02040b;
+color:#888;
+}
+
+@media(max-width:768px){
+.hero h1{font-size:42px;}
+.hero p{font-size:18px;}
+nav ul{display:none;}
+}
