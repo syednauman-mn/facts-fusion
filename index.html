@@ -1,345 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Facts Fusion brings amazing facts, science, technology, mysteries and AI content from around the world.">
-<title>Facts Fusion | Amazing Facts & AI Content</title>
-<link rel="icon" href="logo.png">
-  /* ===== Featured Facts ===== */
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-#facts{
-    padding:100px 10%;
-    background:#0b1020;
-    text-align:center;
-}
+    <title>Facts Fusion | Discover the Universe of Knowledge</title>
 
-#facts h2{
-    font-size:40px;
-    color:#FFD700;
-    margin-bottom:50px;
-}
+    <meta name="description"
+        content="Facts Fusion brings amazing facts about AI, Space, Science, Animals, History and Technology.">
 
-.fact-card{
-    background:rgba(255,255,255,0.06);
-    border:1px solid rgba(255,255,255,0.15);
-    border-radius:20px;
-    padding:30px;
-    margin:25px auto;
-    max-width:700px;
-    backdrop-filter:blur(10px);
-    transition:.35s;
-    box-shadow:0 0 25px rgba(0,200,255,.15);
-}
+    <link rel="icon" href="images/favicon.png">
 
-.fact-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 40px rgba(0,200,255,.5);
-}
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.fact-card h3{
-    color:#00d4ff;
-    margin-bottom:15px;
-    font-size:28px;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
 
-.fact-card p{
-    color:#ddd;
-    font-size:18px;
-    line-height:1.8;
-}
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{
-background:radial-gradient(circle at center,#111827,#020617 75%);
-color:white;overflow-x:hidden;
-}
-
-/* Animated stars */
-.stars,.stars2{
-position:fixed;inset:0;z-index:-2;
-background-repeat:repeat;
-}
-.stars{
-background-image:
-radial-gradient(2px 2px at 20% 30%,#fff,transparent),
-radial-gradient(2px 2px at 70% 20%,#fff,transparent),
-radial-gradient(1px 1px at 40% 70%,#fff,transparent),
-radial-gradient(2px 2px at 80% 80%,#fff,transparent);
-animation:twinkle 4s infinite alternate;
-}
-.stars2{
-animation:twinkle 7s infinite alternate-reverse;
-opacity:.5;
-}
-@keyframes twinkle{from{opacity:.4}to{opacity:1}}
-
-nav{
-position:sticky;top:0;
-display:flex;justify-content:space-between;align-items:center;
-padding:20px 40px;
-background:rgba(0,0,0,.4);
-backdrop-filter:blur(10px);
-z-index:100;
-}
-
-nav a{
-color:#ffd700;
-text-decoration:none;
-margin-left:20px;
-}
-
-.hero{
-text-align:center;
-padding:70px 20px;
-}
-
-.logo{
-width:240px;
-border-radius:50%;
-box-shadow:0 0 50px gold;
-animation:pulse 3s infinite;
-}
-
-@keyframes pulse{
-50%{transform:scale(1.06)}
-}
-
-h1{
-font-size:72px;
-color:#ffd700;
-text-shadow:0 0 30px gold;
-margin-top:20px;
-}
-
-.tagline{
-font-size:24px;
-margin-top:15px;
-opacity:.9;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:15px 35px;
-background:#ff0000;
-color:white;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
-}
-
-/* Universe */
-.universe{
-height:750px;
-display:flex;
-justify-content:center;
-align-items:center;
-position:relative;
-}
-
-.core{
-width:220px;
-height:220px;
-border-radius:50%;
-border:3px solid gold;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-font-weight:bold;
-box-shadow:0 0 50px gold;
-background:rgba(255,215,0,.05);
-}
-
-.orbit{
-position:absolute;
-border:1px solid rgba(255,255,255,.15);
-border-radius:50%;
-animation:spin linear infinite;
-}
-
-.orbit1{width:320px;height:320px;animation-duration:15s}
-.orbit2{width:500px;height:500px;animation-duration:25s}
-.orbit3{width:680px;height:680px;animation-duration:40s}
-
-.planet{
-position:absolute;
-top:-25px;
-left:50%;
-transform:translateX(-50%);
-padding:12px 18px;
-background:#111827;
-border-radius:30px;
-box-shadow:0 0 20px rgba(255,215,0,.6);
-}
-
-@keyframes spin{
-from{transform:rotate(0deg)}
-to{transform:rotate(360deg)}
-}
-
-.section{
-max-width:1200px;
-margin:auto;
-padding:80px 20px;
-}
-
-.section h2{
-text-align:center;
-color:#ffd700;
-font-size:44px;
-margin-bottom:40px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-}
-
-.card{
-background:rgba(17,24,39,.8);
-padding:25px;
-border-radius:18px;
-border:1px solid #374151;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px rgba(255,215,0,.3);
-}
-
-.about{
-text-align:center;
-max-width:900px;
-margin:auto;
-font-size:18px;
-line-height:1.8;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:black;
-color:#aaa;
-}
-
-@media(max-width:768px){
-h1{font-size:42px}
-.logo{width:170px}
-.universe{height:500px}
-.orbit1{width:220px;height:220px}
-.orbit2{width:320px;height:320px}
-.orbit3{width:420px;height:420px}
-.planet{font-size:11px}
-}
-</style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="stars"></div>
-<div class="stars2"></div>
+    <!-- Animated Background -->
+    <div class="stars"></div>
 
-<nav>
-<div><strong>FACTS FUSION</strong></div>
-<div>
-<a href="#vault">Vault</a>
-<a href="#about">About</a>
-<a href="https://www.youtube.com/@AIFactHub-w6u">YouTube</a>
-</div>
-</nav>
+    <!-- Navigation -->
 
-<section class="hero">
-<img class="logo" src="https://i.ibb.co/d0pNjDp0/Chat-GPT-Image-Jun-24-2026-01-29-44-PM.png">
-<h1>FACTS FUSION</h1>
-<p class="tagline">Every Fact Starts A New Journey</p>
-<a class="btn" href="https://www.youtube.com/@AIFactHub-w6u">🚀 Explore Facts</a>
-</section>
-<section id="facts">
+    <header>
 
-<h2>🔥 Featured Facts</h2>
+        <nav>
 
-<div class="fact-card">
+            <div class="logo-text">
+                FACTS FUSION
+            </div>
 
-<h3>🐙 Octopus Intelligence</h3>
+            <ul>
 
-<p>
-An octopus has 3 hearts, blue blood, and can solve puzzles better than many animals.
-</p>
+                <li><a href="#">Home</a></li>
 
-</div>
+                <li><a href="#vault">Knowledge Vault</a></li>
 
-<div class="fact-card">
+                <li><a href="#about">About</a></li>
 
-<h3>🌌 Space</h3>
+                <li>
+                    <a href="https://www.youtube.com/@AIFactHub-w6u" target="_blank">
+                        YouTube
+                    </a>
+                </li>
 
-<p>
-The Sun contains over 99.8% of the mass of our Solar System.
-</p>
+            </ul>
 
-</div>
+        </nav>
 
-<div class="fact-card">
+    </header>
 
-<h3>🤖 Artificial Intelligence</h3>
+    <!-- Hero Section -->
 
-<p>
-AI can now generate images, videos, music, and even websites in minutes.
-</p>
+    <section class="hero">
 
-</div>
+        <div class="hero-content">
 
-</section>
-<section class="universe">
+            <h1>
+                Discover the Universe of Knowledge
+            </h1>
 
-<div class="orbit orbit3">
-<div class="planet">🏛 History</div>
-</div>
+            <p>
+                Explore amazing facts about Space, AI, Science,
+                Technology, History, Animals and much more.
+            </p>
 
-<div class="orbit orbit2">
-<div class="planet">🚀 Space</div>
-</div>
+            <a href="#vault" class="btn">
+                🚀 Explore the Vault
+            </a>
 
-<div class="orbit orbit1">
-<div class="planet">🤖 AI</div>
-</div>
+        </div>
 
-<div class="core">
-KNOWLEDGE<br>CORE
-</div>
+    </section>
 
-</section>
+    <!-- Knowledge Universe -->
 
-<section class="section" id="vault">
-<h2>Knowledge Vault</h2>
+    <section class="knowledge-universe">
 
-<div class="grid">
-<div class="card">🤖 Artificial Intelligence</div>
-<div class="card">🚀 Space Exploration</div>
-<div class="card">🔬 Science Discoveries</div>
-<div class="card">⚡ Technology</div>
-<div class="card">🧩 Mysteries</div>
-<div class="card">🌍 World Facts</div>
-<div class="card">🐾 Animals</div>
-<div class="card">🏛 History</div>
-</div>
+        <div class="coming-soon">
 
-</section>
+            🌌 Knowledge Core Coming Soon...
 
-<section class="section" id="about">
-<h2>About Facts Fusion</h2>
+        </div>
 
-<div class="about">
-Facts Fusion is a futuristic knowledge universe where curiosity meets discovery. Explore fascinating facts, science, AI, technology, history, mysteries and the wonders of space through engaging content and videos.
-</div>
+    </section>
 
-</section>
+    <!-- Knowledge Vault -->
 
-<footer>
-© 2026 Facts Fusion | Know More. Every Day.
-</footer>
+    <section id="vault">
+
+    </section>
+
+    <!-- About -->
+
+    <section id="about">
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        © 2026 Facts Fusion • All Rights Reserved
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
