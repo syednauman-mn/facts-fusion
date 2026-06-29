@@ -88,11 +88,23 @@ padding:20px;
 .hero-content{max-width:850px;}
 
 .hero h1{
-font-size:72px;
+font-size:78px;
+font-weight:800;
 line-height:1.1;
-color:#FFD700;
-text-shadow:0 0 20px gold;
+background:linear-gradient(90deg,#FFD700,#ffffff,#00d4ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 margin-bottom:25px;
+animation:glow 3s infinite alternate;
+}.hero h1{
+font-size:78px;
+font-weight:800;
+line-height:1.1;
+background:linear-gradient(90deg,#FFD700,#ffffff,#00d4ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+margin-bottom:25px;
+animation:glow 3s infinite alternate;
 }
 
 .hero p{
