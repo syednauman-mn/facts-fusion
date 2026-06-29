@@ -127,8 +127,10 @@ box-shadow:0 0 25px rgba(255,0,60,.4);
 }
 
 .btn:hover{
-transform:translateY(-5px);
-box-shadow:0 0 40px rgba(255,0,60,.8);
+transform:translateY(-8px) scale(1.05);
+background:#FFD700;
+color:black;
+box-shadow:0 0 40px rgba(255,215,0,.8);
 }
 
 .knowledge-universe{
