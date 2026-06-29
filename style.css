@@ -204,3 +204,48 @@ transition:1s;
 opacity:1;
 transform:translateY(0);
 }
+/* ===========================
+   STATS SECTION
+=========================== */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+padding:80px 8%;
+}
+
+.stat-box{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:40px;
+text-align:center;
+border-radius:25px;
+transition:.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(255,215,0,.4);
+}
+
+.stat-box h2{
+font-size:50px;
+color:#FFD700;
+margin-bottom:15px;
+}
+
+.stat-box p{
+font-size:18px;
+color:#ddd;
+}
+
+@keyframes glow{
+from{
+filter:drop-shadow(0 0 10px #FFD700);
+}
+to{
+filter:drop-shadow(0 0 35px #00d4ff);
+}
+}
