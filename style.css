@@ -91,24 +91,124 @@ body::before{
    Navbar
 ================================ */
 
+/* ==========================
+   PREMIUM NAVBAR
+========================== */
+
 header{
 
     position:fixed;
 
-    top:0;
+    top:20px;
 
-    width:100%;
+    left:50%;
 
-    padding:20px 8%;
+    transform:translateX(-50%);
 
-    backdrop-filter:blur(18px);
+    width:92%;
 
-    background:rgba(0,0,0,.25);
-
-    z-index:999;
+    z-index:1000;
 
 }
 
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 40px;
+
+    border-radius:20px;
+
+    background:rgba(8,12,30,.55);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 0 30px rgba(0,212,255,.08);
+
+}
+
+.logo{
+
+    font-size:32px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    color:#ffffff;
+
+}
+
+.logo span{
+
+    color:#FFD700;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:500;
+
+    font-size:17px;
+
+    transition:.35s;
+
+    position:relative;
+
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:#00d4ff;
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+    color:#00d4ff;
+
+}
+
+.nav-links a:hover::after{
+
+    width:100%;
+
+}
 .navbar{
 
     display:flex;
@@ -191,20 +291,25 @@ header{
 
 .hero h1{
 
-    font-size:76px;
+font-size:82px;
 
-    line-height:1.1;
+font-weight:800;
 
-    font-weight:800;
+line-height:1.05;
 
-    background:
-    linear-gradient(90deg,#FFD700,#ffffff,#00d4ff);
+background:linear-gradient(
+90deg,
+#FFD700,
+#ffffff,
+#00d4ff);
 
-    -webkit-background-clip:text;
+-webkit-background-clip:text;
 
-    -webkit-text-fill-color:transparent;
+-webkit-text-fill-color:transparent;
 
-    margin-bottom:25px;
+text-shadow:0 0 40px rgba(0,212,255,.2);
+
+margin-bottom:30px;
 
 }
 
