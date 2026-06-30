@@ -369,3 +369,88 @@ header{
     }
 
 }
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:120px 8%;
+
+    gap:60px;
+
+}
+
+.hero-text{
+
+    flex:1;
+
+}
+
+.hero-image{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:480px;
+
+    animation:planetFloat 6s ease-in-out infinite;
+
+    filter:drop-shadow(0 0 60px #00d4ff);
+
+}
+
+@keyframes planetFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.hero-image img{
+
+width:300px;
+
+margin-top:40px;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+}
