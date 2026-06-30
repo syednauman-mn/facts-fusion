@@ -251,3 +251,121 @@ header{
     box-shadow:0 0 30px rgba(255,215,0,.7);
 
 }
+/* ==========================================
+   EXPLORE THE UNIVERSE
+========================================== */
+
+.universe{
+    padding:100px 8%;
+    text-align:center;
+}
+
+.section-title{
+    font-size:52px;
+    color:#FFD700;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    max-width:700px;
+    margin:0 auto 60px;
+    color:#d7d7d7;
+    font-size:20px;
+    line-height:1.8;
+}
+
+.planet-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.planet-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:28px;
+
+    backdrop-filter:blur(20px);
+
+    padding:35px;
+
+    transition:.45s;
+
+    cursor:pointer;
+
+}
+
+.planet-card:hover{
+
+    transform:translateY(-15px);
+
+    border-color:#00d4ff;
+
+    box-shadow:
+    0 0 20px rgba(0,212,255,.4),
+    0 0 50px rgba(0,212,255,.2);
+
+}
+
+.planet-card img{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:contain;
+
+    margin-bottom:25px;
+
+    animation:floatPlanet 6s ease-in-out infinite;
+
+    transition:.45s;
+
+}
+
+.planet-card:hover img{
+
+    transform:scale(1.12) rotate(6deg);
+
+    filter:drop-shadow(0 0 25px #00d4ff);
+
+}
+
+.planet-card h3{
+
+    color:#FFD700;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.planet-card p{
+
+    color:#d7d7d7;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+@keyframes floatPlanet{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
