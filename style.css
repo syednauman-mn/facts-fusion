@@ -1042,3 +1042,82 @@ header{
     transform:translateY(0);
 
 }
+/* ==========================
+   HAMBURGER MENU
+========================== */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+.navbar{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 20px;
+}
+
+.menu-toggle{
+    display:block;
+}
+
+.nav-links{
+
+    position:absolute;
+
+    top:80px;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(8,12,30,.98);
+
+    backdrop-filter:blur(20px);
+
+    display:none;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:25px 0;
+
+    gap:25px;
+
+    border-radius:0 0 20px 20px;
+
+}
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+.hero{
+
+    padding-top:140px;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero-image img{
+
+    width:240px;
+
+}
+
+}
