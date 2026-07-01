@@ -401,3 +401,637 @@ section{
     margin-bottom:70px;
 
 }
+/* ===================================================
+   FACTS FUSION V4
+   PART 2
+   Explore • YouTube • About
+=================================================== */
+
+/* ==========================
+   EXPLORE SECTION
+========================== */
+
+.explore{
+    text-align:center;
+}
+
+.planet-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-top:40px;
+
+}
+
+.planet-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    transition:.4s;
+
+    cursor:pointer;
+
+}
+
+.planet-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#00d4ff;
+
+    box-shadow:
+    0 0 25px rgba(0,212,255,.35);
+
+}
+
+.planet-card img{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:0 auto 25px;
+
+    animation:planetCardFloat 6s ease-in-out infinite;
+
+    transition:.4s;
+
+}
+
+.planet-card:hover img{
+
+    transform:scale(1.1) rotate(6deg);
+
+    filter:drop-shadow(0 0 25px #00d4ff);
+
+}
+
+@keyframes planetCardFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+.planet-card h3{
+
+    font-size:28px;
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+}
+
+.planet-card p{
+
+    color:#d6d6d6;
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/* ==========================
+   YOUTUBE SECTION
+========================== */
+
+.youtube{
+
+    text-align:center;
+
+}
+
+.youtube-card{
+
+    max-width:750px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(20px);
+
+    padding:60px 40px;
+
+    transition:.4s;
+
+}
+
+.youtube-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#ff0033;
+
+    box-shadow:
+    0 0 35px rgba(255,0,60,.35);
+
+}
+
+.youtube-card i{
+
+    font-size:90px;
+
+    color:#ff0033;
+
+    margin-bottom:25px;
+
+}
+
+.youtube-card h3{
+
+    font-size:38px;
+
+    color:#FFD700;
+
+    margin-bottom:20px;
+
+}
+
+.youtube-card p{
+
+    color:#ddd;
+
+    font-size:19px;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+
+.about{
+
+    text-align:center;
+
+}
+
+.about-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    padding:60px;
+
+}
+
+.about-box p{
+
+    font-size:20px;
+
+    line-height:2;
+
+    color:#d8d8d8;
+
+    margin-bottom:25px;
+
+}
+
+.about-box p:last-child{
+
+    margin-bottom:0;
+
+}
+/* ===================================================
+   FACTS FUSION V4
+   PART 3
+   Journey • Footer • Responsive
+=================================================== */
+
+/* ==========================
+   JOURNEY
+========================== */
+
+.journey{
+
+    text-align:center;
+
+}
+
+.journey h2{
+
+    font-size:54px;
+
+    color:#FFD700;
+
+    margin-bottom:25px;
+
+}
+
+.journey>p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    margin-bottom:70px;
+
+}
+
+.journey-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+    margin-bottom:60px;
+
+}
+
+.journey-item{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    backdrop-filter:blur(20px);
+
+    padding:40px 30px;
+
+    transition:.4s;
+
+}
+
+.journey-item:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#FFD700;
+
+    box-shadow:0 0 30px rgba(255,215,0,.25);
+
+}
+
+.icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+.journey-item h3{
+
+    font-size:28px;
+
+    color:#FFD700;
+
+    margin-bottom:15px;
+
+}
+
+.journey-item p{
+
+    color:#d8d8d8;
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.footer{
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:80px 8% 40px;
+
+    text-align:center;
+
+}
+
+.footer-logo{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-logo span{
+
+    color:#FFD700;
+
+}
+
+.footer-tagline{
+
+    color:#aaa;
+
+    margin-bottom:30px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#00d4ff;
+
+}
+
+.footer-social{
+
+    margin-bottom:25px;
+
+}
+
+.footer-social a{
+
+    color:#ff0033;
+
+    font-size:36px;
+
+    transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+    transform:scale(1.2);
+
+    color:#FFD700;
+
+}
+
+.copyright{
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+    padding:16px 25px;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.nav-links{
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding-top:170px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+}
+
+.hero p{
+
+    margin:auto auto 35px;
+
+    font-size:18px;
+
+}
+
+.hero-image img{
+
+    width:300px;
+
+}
+
+.section-title{
+
+    font-size:40px;
+
+}
+
+.section-subtitle{
+
+    font-size:18px;
+
+}
+
+.about-box{
+
+    padding:35px;
+
+}
+
+.about-box p{
+
+    font-size:18px;
+
+}
+
+.journey h2{
+
+    font-size:40px;
+
+}
+
+.journey>p{
+
+    font-size:18px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.logo{
+
+    font-size:26px;
+
+}
+
+.nav-links{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.hero{
+
+    padding:160px 20px 80px;
+
+}
+
+.hero h1{
+
+    font-size:38px;
+
+}
+
+.hero p{
+
+    font-size:17px;
+
+}
+
+.hero-image img{
+
+    width:240px;
+
+}
+
+.planet-card{
+
+    padding:25px;
+
+}
+
+.planet-card img{
+
+    width:140px;
+
+    height:140px;
+
+}
+
+.youtube-card{
+
+    padding:40px 25px;
+
+}
+
+.youtube-card h3{
+
+    font-size:30px;
+
+}
+
+.footer-links{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+}
+
+/* ==========================
+   SCROLL REVEAL
+========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:all .8s ease;
+
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
