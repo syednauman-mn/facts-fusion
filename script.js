@@ -157,3 +157,32 @@ document.querySelectorAll(".planet-card").forEach(card=>{
 // ==============================
 
 console.log("🚀 Facts Fusion V4 Loaded Successfully!");
+/* ==========================
+   MOBILE MENU
+========================== */
+
+const menuBtn = document.querySelector(".menu-toggle");
+
+const navMenu = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click",()=>{
+
+    navMenu.classList.toggle("active");
+
+    const icon = menuBtn.querySelector("i");
+
+    if(navMenu.classList.contains("active")){
+
+        icon.classList.remove("fa-bars");
+
+        icon.classList.add("fa-xmark");
+
+    }else{
+
+        icon.classList.remove("fa-xmark");
+
+        icon.classList.add("fa-bars");
+
+    }
+
+});
