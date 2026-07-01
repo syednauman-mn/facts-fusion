@@ -644,3 +644,69 @@ footer{
 }
 
 }
+/* ===========================
+   JOURNEY SECTION
+=========================== */
+
+.journey{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.journey h2{
+    font-size:60px;
+    color:#FFD700;
+    margin-bottom:25px;
+}
+
+.journey p{
+    max-width:850px;
+    margin:auto;
+    color:#ddd;
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:70px;
+}
+
+.journey-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:35px;
+    margin-bottom:70px;
+}
+
+.journey-card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    padding:45px 30px;
+    border-radius:25px;
+    transition:.4s;
+}
+
+.journey-card:hover{
+    transform:translateY(-12px);
+    border-color:#00d4ff;
+    box-shadow:0 0 35px rgba(0,212,255,.35);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.journey-card h3{
+    color:#FFD700;
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.journey-card p{
+    font-size:18px;
+    color:#ddd;
+    margin:0;
+}
+
+.journey .btn{
+    margin-top:20px;
+}
