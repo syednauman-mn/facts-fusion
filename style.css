@@ -848,17 +848,6 @@ section{
    MOBILE
 ========================== */
 
-@media(max-width:900px){
-
-.navbar{
-
-    padding:16px 25px;
-
-    flex-direction:column;
-
-    gap:18px;
-
-}
 
 .nav-links{
 
@@ -942,32 +931,7 @@ section{
    MOBILE
 ========================== */
 
-@media (max-width:768px){
 
-header{
-    top:0;
-    width:100%;
-    left:0;
-    transform:none;
-    padding:0;
-}
-
-.navbar{
-    border-radius:0;
-    padding:15px 20px;
-    flex-direction:column;
-    gap:15px;
-}
-
-.logo{
-    font-size:28px;
-}
-
-.nav-links{
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:18px;
-}
 
 .hero{
     flex-direction:column-reverse;
