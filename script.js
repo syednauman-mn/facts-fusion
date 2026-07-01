@@ -1,46 +1,159 @@
-// ===============================
-// FACTS FUSION V2
-// script.js
-// ===============================
+/* ==========================================
+   FACTS FUSION V4
+   script.js
+========================================== */
 
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function (e) {
+// ==============================
+// Smooth Scrolling
+// ==============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function(e){
 
         const target = document.querySelector(this.getAttribute("href"));
 
-        if (!target) return;
+        if(!target) return;
 
         e.preventDefault();
 
         target.scrollIntoView({
-            behavior: "smooth"
+            behavior:"smooth"
         });
+
     });
+
 });
 
-// Fade-in animation on scroll
-const observer = new IntersectionObserver((entries) => {
+// ==============================
+// Scroll Reveal Animation
+// ==============================
 
-    entries.forEach(entry => {
+const revealElements = document.querySelectorAll(
+    ".hero, .explore, .youtube, .about, .journey, .planet-card, .journey-item"
+);
 
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("active");
+
         }
 
     });
 
-}, {
-    threshold: 0.15
+},{
+    threshold:0.15
 });
 
-document.querySelectorAll("section").forEach(section => {
+revealElements.forEach(el=>{
 
-    section.classList.add("hidden");
+    el.classList.add("reveal");
 
-    observer.observe(section);
+    observer.observe(el);
 
 });
 
-// Console message
-console.log("🚀 Facts Fusion Loaded Successfully!");
+// ==============================
+// Active Navigation Link
+// ==============================
+
+const sections = document.querySelectorAll("section");
+
+const navLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll",()=>{
+
+    let current = "";
+
+    sections.forEach(section=>{
+
+        const top = section.offsetTop - 150;
+
+        const height = section.offsetHeight;
+
+        if(window.scrollY >= top){
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(link=>{
+
+        link.classList.remove("active");
+
+        if(link.getAttribute("href") === "#" + current){
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+// ==============================
+// Navbar Shadow
+// ==============================
+
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 50){
+
+        navbar.style.boxShadow =
+        "0 0 40px rgba(0,212,255,.18)";
+
+    }
+
+    else{
+
+        navbar.style.boxShadow =
+        "0 0 25px rgba(0,212,255,.08)";
+
+    }
+
+});
+
+// ==============================
+// Floating Cards Effect
+// ==============================
+
+document.querySelectorAll(".planet-card").forEach(card=>{
+
+    card.addEventListener("mousemove",(e)=>{
+
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+
+        const y = e.clientY - rect.top;
+
+        card.style.transform =
+        `perspective(1000px)
+         rotateY(${(x-rect.width/2)/25}deg)
+         rotateX(${-(y-rect.height/2)/25}deg)
+         translateY(-10px)`;
+
+    });
+
+    card.addEventListener("mouseleave",()=>{
+
+        card.style.transform =
+        "perspective(1000px) rotateX(0) rotateY(0)";
+
+    });
+
+});
+
+// ==============================
+// Console
+// ==============================
+
+console.log("🚀 Facts Fusion V4 Loaded Successfully!");
