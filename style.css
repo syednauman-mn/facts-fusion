@@ -1012,8 +1012,8 @@ section{
 
 .menu-toggle{
     display:none;
-    font-size:28px;
-    color:#fff;
+    font-size:30px;
+    color:#ffffff;
     cursor:pointer;
 }
 
@@ -1021,13 +1021,19 @@ section{
 
 @media (max-width:768px){
 
-.navbar{
-    flex-direction:row;
-    justify-content:space-between;
+.menu-toggle{
+    display:flex !important;
     align-items:center;
-    padding:18px 20px;
+    justify-content:center;
 }
 
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+}
 .menu-toggle{
     display:block;
 }
